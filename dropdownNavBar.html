@@ -1,0 +1,111 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <!-- font -->
+    <link href="https://fonts.googleapis.com/css?family=Nunito&display=swap" rel="stylesheet">
+
+    <!-- icons -->
+    <link crossorigin="anonymous" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
+        integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: salmon;
+        }
+
+        nav {
+            width: 100%;
+            background-color: white;
+            text-align: center;
+        }
+
+        nav ul li {
+            position: relative;
+        }
+
+        nav ul li:hover>ul {
+            display: block;
+        }
+
+        nav ul li a {
+            display: block;
+            text-decoration: none;
+            padding: 20px 0;
+            color: black;
+            width: 100%;
+            font-size: 20px;
+            font-family: 'Nunito';
+        }
+
+        nav ul li ul {
+            /* position: absolute; consider removing */
+            display: none;
+            background-color: white;
+        }
+
+        nav ul li ul li a {
+            padding: 15px 0;
+            font-size: 25px;
+        }
+
+        nav ul li ul li a:hover {
+            cursor: pointer;
+            color: black;
+            background-color: rgb(233, 233, 233);
+        }
+
+        /* icon styling */
+        .fa-home {
+            color: #a00f88;
+        }
+
+        .fa-child {
+            color: #df0101
+        }
+
+        .fa-images {
+            color: #ffd51b;
+        }
+
+        .fa-paint-brush {
+            color: #22ac00;
+        }
+
+        .fa-envelope {
+            color: #3c91d6;
+        }
+
+        i {
+            margin: 3px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav>
+        <ul>
+            <li id="hamburger"><a href="#"><i class="fas fa-bars fa-2x"></i></a>
+                <ul>
+                    <li><a href="home.html" id="homeLink"><i class="fas fa-home"></i>Home</a></li>
+                    <li><a href="about.html" id="aboutLink"><i class="fas fa-child"></i>About</a></li>
+                    <li><a href="gallery.html" id="galleryLink"><i class="fas fa-images"></i>Gallery</a></li>
+                    <li><a href="products.html" id="productsLink"><i class="fas fa-paint-brush"></i>Products</a></li>
+                    <li><a href="contact.html" id="contactLink"><i class="fas fa-envelope"></i>Contact</a></li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+
+</body>
+
+</html>

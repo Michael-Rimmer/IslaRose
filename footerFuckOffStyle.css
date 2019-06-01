@@ -1,0 +1,172 @@
+* {
+    margin: 0;
+    padding: 0;
+    /* box-sizing: border-box; */
+}
+
+html,
+body {
+    height: 100%;
+    min-width: 585px;
+}
+
+a {
+    text-decoration: none;
+}
+
+i {
+    margin: 3px;
+}
+
+#page-container {
+    position: relative;
+    min-height: 100vh;
+}
+
+#content-wrap {
+    padding-bottom: 12vh;
+    /* height: 100vh; */
+    background-color: white;
+    /* overflow: auto; */
+}
+
+nav {
+    background-color: white;
+    height: 12vh;
+    border-bottom: solid 1.5px lightgrey;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    /* acts on the main axis (row since flex-direction is row)*/
+    align-items: center;
+    /*acts on cross axis (column)*/
+}
+
+li {
+    list-style: none;
+    display: inline-block;
+}
+
+
+li a {
+    display: block;
+    line-height: 12vh;
+    height: 12vh;
+    ;
+    padding: 0 10px;
+    font-size: 20px;
+    font-family: 'Nunito';
+    color: grey;
+}
+
+li a:hover {
+    cursor: pointer;
+    color: black;
+    background-color: rgb(233, 233, 233);
+    /* play around with hover styling */
+}
+
+/* home page */
+#logo {
+    min-height: 76vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+#logo img {
+    height: 90%;
+}
+
+/* about page */
+#aboutContent {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    min-height: 76vh;
+}
+
+#aboutText {
+    width: 400px;
+    height: 400px;
+}
+
+#islaSlideshow {
+    height: 400px;
+    width: 400px;
+}
+
+#verticalLine {
+    border-left: 2.5px solid lightgrey;
+    height: 400px;
+    display: inline-block;
+    margin: 0 5vw;
+    border-radius: 5px;
+}
+
+/* gallery page */
+#galleryContent {
+    height: 100px;
+}
+
+footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+    height: 12vh;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background-color: white;
+    border-top: 1.5px solid lightgrey;
+    clear: both;
+
+}
+
+/* icon styling */
+.fa-home {
+    color: #a00f88;
+}
+
+.fa-child {
+    color: #df0101
+}
+
+.fa-images {
+    color: #ffd51b;
+}
+
+.fa-paint-brush {
+    color: #22ac00;
+}
+
+.fa-envelope {
+    color: #3c91d6;
+}
+
+/* social media links styling */
+.fa-facebook,
+.fa-instagram {
+    margin: 0 7px;
+    padding: 7px;
+    border-radius: 30px;
+    border: 2px solid grey;
+    color: grey;
+}
+
+.fa-facebook:hover {
+    background-color: #4e28f7;
+    border: 2px solid rgb(14, 35, 104);
+    color: white;
+}
+
+.fa-instagram:hover {
+    background-color: #d31eca;
+    border: 2px solid #96108f;
+    color: white;
+}

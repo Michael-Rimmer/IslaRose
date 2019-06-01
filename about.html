@@ -1,0 +1,109 @@
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta content="width=device-width, initial-scale=1.0" name="viewport">
+        <meta content="ie=edge" http-equiv="X-UA-Compatible">
+        <title>Art by Isla Rose</title>
+
+        <link href="testStyle.css" rel="stylesheet" type="text/css">
+
+        <!-- font -->
+        <link href="https://fonts.googleapis.com/css?family=Nunito&display=swap" rel="stylesheet">
+
+        <!-- icons -->
+        <link crossorigin="anonymous" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" rel="stylesheet">
+        
+    </head>
+    <body>
+
+        <div id="container">
+
+            <div id="content">
+
+                <nav>
+                    <ul>
+                        <li><a href="home.html" id="homeLink"><i class="fas fa-home"></i>Home</a></li>
+                        <li><a href="about.html" id="aboutLink"><i class="fas fa-child"></i>About</a></li>
+                        <li><a href="gallery.html" id="galleryLink"><i class="fas fa-images"></i>Gallery</a></li>
+                        <li><a href="products.html" id="productsLink"><i class="fas fa-paint-brush"></i>Products</a></li>
+                        <li><a href="contact.html" id="contactLink"><i class="fas fa-envelope"></i>Contact</a></li>
+                    </ul>
+                </nav>
+
+                <div id="aboutContent">
+                    <img alt="slideshow of Isla" id="islaSlideshow" name="slideshow">
+                    <div id="verticalLine"></div>
+                    <p id="aboutText">Hi I'm Isla and welcome to my new site!...more welcome content</p>
+                </div>
+
+            </div>
+
+        </div>
+
+        <footer>
+            <a href="">
+                <i class="fab fa-facebook fa-2x"></i>
+            </a>
+            <a href="">
+                <i class="fab fa-instagram fa-2x"></i>
+            </a>
+        </footer>
+    </body>
+</html>
+
+<!-- <script type="text/javascript" src="js/javascript.js"></script> -->
+
+<script type="text/javascript">
+
+    var i = 0;
+    var images = [];
+    var time = 3000;
+
+    images[0] = 'imgs/islaPainting.jpg';
+    images[1] = 'imgs/little-miss.jpg';
+    images[2] = 'imgs/islaRoseLogo.jpg';
+    images[3] = 'imgs/instaPhoto.jpg';
+
+    function nextImage() {
+
+        document.slideshow.src = images[i];
+
+        if (i < images.length - 1) {
+            i = i + 1;
+        } else {
+            i = 0;
+        }
+
+        setTimeout("nextImage()", time);
+    }
+
+    function underlineNavBarLink() {
+
+        var path = window.location.pathname;
+        var link;
+
+        if (path.endsWith("home.html")) {
+            link = document.getElementById("homeLink");
+            link.style.textDecoration = "underline";
+        } else if (path.endsWith("gallery.html")) {
+            link = document.getElementById("galleryLink");
+            link.style.textDecoration = "underline";
+        } else if (path.endsWith("contact.html")) {
+            link = document.getElementById("contactLink");
+            link.style.textDecoration = "underline";
+        } else if (path.endsWith("products.html")) {
+            link = document.getElementById("productsLink");
+            link.style.textDecoration = "underline";
+        } else if (path.endsWith("about.html")) {
+            link = document.getElementById("aboutLink");
+            link.style.textDecoration = "underline";
+        }
+
+    }
+
+    window.onload = function () {
+        underlineNavBarLink();
+        nextImage();
+    };
+    
+</script>
