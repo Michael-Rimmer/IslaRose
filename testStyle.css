@@ -80,12 +80,14 @@ i {
     /* overflow: auto; */
 }
 
-nav {
+/* normal nav */
+#normalNav {
+
     background-color: white;
     height: 12vh;
     border-bottom: solid 1.5px lightgrey;
 
-    display: flex;
+    display: none;
     flex-direction: row;
     justify-content: center;
     /* acts on the main axis (row since flex-direction is row)*/
@@ -93,27 +95,74 @@ nav {
     /*acts on cross axis (column)*/
 }
 
-li {
+#normalNav li {
     list-style: none;
     display: inline-block;
 }
 
-
-li a {
+#normalNav li a {
     display: block;
     line-height: 12vh;
     height: 12vh;
-    padding: 0 10px;
-    font-size: 15px;
+    padding: 0 20px;
+    font-size: 20px;
     font-family: 'Nunito';
     color: grey;
 }
 
-li a:hover {
+#normalNav li a:hover {
     cursor: pointer;
     color: black;
     background-color: rgb(233, 233, 233);
     /* play around with hover styling */
+}
+
+/* hamburger Nav */
+#hamburgerNav {
+    width: 100%;
+    background-color: white;
+    text-align: center;
+    /* position: absolute; */
+    border-bottom: solid 1.5px lightgrey;
+}
+
+#hamburgerNav ul li {
+    position: relative;
+}
+
+#hamburgerNav:hover {
+    position: absolute;
+}
+
+#hamburgerNav ul li:hover>ul {
+    display: block;
+}
+
+#hamburgerNav ul li a {
+    display: block;
+    text-decoration: none;
+    padding: 20px 0;
+    color: black;
+    width: 100%;
+    font-size: 20px;
+    font-family: 'Nunito';
+}
+
+#hamburgerNav ul li ul {
+    /* position: absolute; consider removing */
+    display: none;
+    background-color: white;
+}
+
+#hamburgerNav ul li ul li a {
+    padding: 15px 0;
+    font-size: 25px;
+}
+
+#hamburgerNav ul li ul li a:hover {
+    cursor: pointer;
+    color: black;
+    background-color: rgb(233, 233, 233);
 }
 
 /* home page */
@@ -213,7 +262,7 @@ table {
     border-spacing: 0px;
     border-collapse: collapse;
     font-size: 20px;
-    font-family: 'Abel',sans-serif;
+    font-family: 'Abel', sans-serif;
     color: #4e4e4e;
 }
 
@@ -309,6 +358,14 @@ footer {
 @media only screen and (min-width:690px) {
 
     /* nav bar */
+    #normalNav {
+        display: flex;
+    }
+
+    #hamburgerNav {
+        display: none;
+    }
+
     li a {
         padding: 0 20px;
         font-size: 20px;
@@ -320,12 +377,12 @@ footer {
         height: 300px;
         font-size: 18px;
     }
-    
+
     #islaSlideshow {
         height: 300px;
         width: 300px;
     }
-    
+
     #verticalLine {
         border-left: 2.5px solid lightgrey;
         height: 300px;
@@ -336,5 +393,5 @@ footer {
 
     /* gallery */
 
-    
+
 }

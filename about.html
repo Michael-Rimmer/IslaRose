@@ -1,60 +1,79 @@
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta content="width=device-width, initial-scale=1.0" name="viewport">
-        <meta content="ie=edge" http-equiv="X-UA-Compatible">
-        <title>Art by Isla Rose</title>
 
-        <link href="testStyle.css" rel="stylesheet" type="text/css">
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="ie=edge" http-equiv="X-UA-Compatible">
+    <title>Art by Isla Rose</title>
 
-        <!-- font -->
-        <link href="https://fonts.googleapis.com/css?family=Nunito&display=swap" rel="stylesheet">
+    <link href="testStyle.css" rel="stylesheet" type="text/css">
 
-        <!-- icons -->
-        <link crossorigin="anonymous" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" rel="stylesheet">
-        
-    </head>
-    <body>
+    <!-- font -->
+    <link href="https://fonts.googleapis.com/css?family=Nunito&display=swap" rel="stylesheet">
 
-        <div id="container">
+    <!-- icons -->
+    <link crossorigin="anonymous" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
+        integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" rel="stylesheet">
 
-            <div id="content">
+</head>
 
-                <nav>
-                    <ul>
-                        <li><a href="home.html" id="homeLink"><i class="fas fa-home"></i>Home</a></li>
-                        <li><a href="about.html" id="aboutLink"><i class="fas fa-child"></i>About</a></li>
-                        <li><a href="gallery.html" id="galleryLink"><i class="fas fa-images"></i>Gallery</a></li>
-                        <li><a href="products.html" id="productsLink"><i class="fas fa-paint-brush"></i>Products</a></li>
-                        <li><a href="contact.html" id="contactLink"><i class="fas fa-envelope"></i>Contact</a></li>
-                    </ul>
-                </nav>
+<body>
 
-                <div id="aboutContent">
-                    <img alt="slideshow of Isla" id="islaSlideshow" name="slideshow">
-                    <div id="verticalLine"></div>
-                    <p id="aboutText">Hi I'm Isla and welcome to my new site!...more welcome content</p>
-                </div>
+    <div id="container">
 
+        <div id="content">
+
+            <nav id="normalNav">
+                <ul>
+                    <li><a href="home.html" id="homeLink"><i class="fas fa-home"></i>Home</a></li>
+                    <li><a href="about.html" id="aboutLink"><i class="fas fa-child"></i>About</a></li>
+                    <li><a href="gallery.html" id="galleryLink"><i class="fas fa-images"></i>Gallery</a></li>
+                    <li><a href="products.html" id="productsLink"><i class="fas fa-paint-brush"></i>Products</a></li>
+                    <li><a href="contact.html" id="contactLink"><i class="fas fa-envelope"></i>Contact</a></li>
+                </ul>
+            </nav>
+
+            <nav id="hamburgerNav">
+                <ul>
+                    <li id="hamburger">
+                        <a href="#">
+                            <i class="fas fa-bars fa-2x"></i>
+                        </a>
+                        <ul>
+                            <li><a href="home.html" id="homeLink"><i class="fas fa-home"></i>Home</a></li>
+                            <li><a href="about.html" id="aboutLink"><i class="fas fa-child"></i>About</a></li>
+                            <li><a href="gallery.html" id="galleryLink"><i class="fas fa-images"></i>Gallery</a></li>
+                            <li><a href="products.html" id="productsLink"><i class="fas fa-paint-brush"></i>Products</a>
+                            </li>
+                            <li><a href="contact.html" id="contactLink"><i class="fas fa-envelope"></i>Contact</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+
+            <div id="aboutContent">
+                <img alt="slideshow of Isla" id="islaSlideshow" name="slideshow">
+                <div id="verticalLine"></div>
+                <p id="aboutText">Hi I'm Isla and welcome to my new site!...more welcome content</p>
             </div>
 
         </div>
 
-        <footer>
-            <a href="">
-                <i class="fab fa-facebook fa-2x"></i>
-            </a>
-            <a href="">
-                <i class="fab fa-instagram fa-2x"></i>
-            </a>
-        </footer>
-    </body>
+    </div>
+
+    <footer>
+        <a href="">
+            <i class="fab fa-facebook fa-2x"></i>
+        </a>
+        <a href="">
+            <i class="fab fa-instagram fa-2x"></i>
+        </a>
+    </footer>
+</body>
+
 </html>
 
-<!-- <script type="text/javascript" src="js/javascript.js"></script> -->
-
 <script type="text/javascript">
-
     var i = 0;
     var images = [];
     var time = 3000;
@@ -105,5 +124,4 @@
         underlineNavBarLink();
         nextImage();
     };
-    
 </script>

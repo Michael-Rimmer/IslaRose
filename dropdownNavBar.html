@@ -2,8 +2,8 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="ie=edge" http-equiv="X-UA-Compatible">
     <title>Document</title>
 
     <!-- font -->
@@ -12,6 +12,7 @@
     <!-- icons -->
     <link crossorigin="anonymous" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
         integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" rel="stylesheet">
+
     <style>
         * {
             margin: 0;
@@ -22,21 +23,67 @@
             background-color: salmon;
         }
 
-        nav {
+        a {
+            text-decoration: none;
+        }
+
+        i {
+            margin: 3px;
+        }
+
+        /* normal nav */
+        #normalNav {
+
+            background-color: white;
+            height: 12vh;
+            border-bottom: solid 1.5px lightgrey;
+
+            display: none;
+            flex-direction: row;
+            justify-content: center;
+            /* acts on the main axis (row since flex-direction is row)*/
+            align-items: center;
+            /*acts on cross axis (column)*/
+        }
+
+        #normalNav li {
+            list-style: none;
+            display: inline-block;
+        }
+
+        #normalNav li a {
+            display: block;
+            line-height: 12vh;
+            height: 12vh;
+            padding: 0 10px;
+            font-size: 15px;
+            font-family: 'Nunito';
+            color: grey;
+        }
+
+        #normalNav li a:hover {
+            cursor: pointer;
+            color: black;
+            background-color: rgb(233, 233, 233);
+            /* play around with hover styling */
+        }
+
+        /* hamburger Nav */
+        #hamburgerNav {
             width: 100%;
             background-color: white;
             text-align: center;
         }
 
-        nav ul li {
+        #hamburgerNav ul li {
             position: relative;
         }
 
-        nav ul li:hover>ul {
+        #hamburgerNav ul li:hover>ul {
             display: block;
         }
 
-        nav ul li a {
+        #hamburgerNav ul li a {
             display: block;
             text-decoration: none;
             padding: 20px 0;
@@ -46,18 +93,18 @@
             font-family: 'Nunito';
         }
 
-        nav ul li ul {
+        #hamburgerNav ul li ul {
             /* position: absolute; consider removing */
             display: none;
             background-color: white;
         }
 
-        nav ul li ul li a {
+        #hamburgerNav ul li ul li a {
             padding: 15px 0;
             font-size: 25px;
         }
 
-        nav ul li ul li a:hover {
+        #hamburgerNav ul li ul li a:hover {
             cursor: pointer;
             color: black;
             background-color: rgb(233, 233, 233);
@@ -69,7 +116,7 @@
         }
 
         .fa-child {
-            color: #df0101
+            color: #df0101;
         }
 
         .fa-images {
@@ -87,14 +134,39 @@
         i {
             margin: 3px;
         }
+
+        @media (min-width:690px) {
+
+            #normalNav {
+                display: flex;
+            }
+
+            #hamburgerNav {
+                display: none;
+            }
+        }
     </style>
+
 </head>
 
 <body>
 
-    <nav>
+    <nav id="normalNav">
         <ul>
-            <li id="hamburger"><a href="#"><i class="fas fa-bars fa-2x"></i></a>
+            <li><a href="home.html" id="homeLink"><i class="fas fa-home"></i>Home</a></li>
+            <li><a href="about.html" id="aboutLink"><i class="fas fa-child"></i>About</a></li>
+            <li><a href="gallery.html" id="galleryLink"><i class="fas fa-images"></i>Gallery</a></li>
+            <li><a href="products.html" id="productsLink"><i class="fas fa-paint-brush"></i>Products</a></li>
+            <li><a href="contact.html" id="contactLink"><i class="fas fa-envelope"></i>Contact</a></li>
+        </ul>
+    </nav>
+
+    <nav id="hamburgerNav">
+        <ul>
+            <li id="hamburger">
+                <a href="#">
+                    <i class="fas fa-bars fa-2x"></i>
+                </a>
                 <ul>
                     <li><a href="home.html" id="homeLink"><i class="fas fa-home"></i>Home</a></li>
                     <li><a href="about.html" id="aboutLink"><i class="fas fa-child"></i>About</a></li>
